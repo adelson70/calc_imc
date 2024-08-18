@@ -1,0 +1,10 @@
+body, label, input{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.corpo{
+    text-align: center;
+}

@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora IMC</title>
+    <!-- IMPORTANDO ESTILOS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    Calc
+    <div class="container">
+        <div class="corpo">
+
+                <h1>Calculadora IMC</h1>
+            
+                <label for="altura">Digite a altura em cm</label>
+                <input type="text" id="altura" maxlength="5">
+            
+                <label for="peso">Digite seu peso em kg</label>
+                <input type="text" id="peso" maxlength="5">
+
+                <button>
+                    Calcular
+                </button>
+
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
 </html>
