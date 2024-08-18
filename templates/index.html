@@ -14,12 +14,12 @@
                 <h1>Calculadora IMC</h1>
             
                 <label for="altura">Digite a altura em cm</label>
-                <input type="text" id="altura" maxlength="5">
+                <input type="number" id="altura" min="0" max="999" required>
             
                 <label for="peso">Digite seu peso em kg</label>
-                <input type="text" id="peso" maxlength="5">
+                <input type="number" id="peso" min="0" max="999" required>
 
-                <button>
+                <button class="btn-calcular">
                     Calcular
                 </button>
 

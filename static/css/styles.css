@@ -3,8 +3,22 @@ body, label, input{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .corpo{
     text-align: center;
+}
+
+/* REMOVE A SETA DE INCREMENTO E DECREMENTO DO INPUT TIPO NUMERO PARA CHROME E SAFARI */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* REMOVE A SETA DE INCREMENTO E DECREMENTO DO INPUT TIPO NUMERO PARA IE E EDGE */
+input[type="number"] {
+    appearance: textfield;
 }

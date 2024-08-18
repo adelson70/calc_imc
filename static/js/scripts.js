@@ -1,19 +1,45 @@
-function adjustValue(e, unit) {
-    let value = parseInt(e.target.value.replace(unit, '') || '0');
-    
-    if (e.key === 'ArrowUp') {
-        value += 1;
-    } else if (e.key === 'ArrowDown') {
-        value = value > 0 ? value - 1 : 0;
+// MASCARA PARA GARANTIR QUE A ALTURA MINIMA SEJA 0 E MAIOR 999
+document.getElementById('altura').addEventListener('input', function(e) {
+    let value = parseInt(e.target.value);
+
+    if (value < 0) {
+        e.target.value = 0;
+
+    } else if (value > 999) {
+        e.target.value = 999;
     }
-
-    e.target.value = value + unit;
-}
-
-document.getElementById('altura').addEventListener('keydown', function(e) {
-    adjustValue(e, 'cm');
 });
 
-document.getElementById('peso').addEventListener('keydown', function(e) {
-    adjustValue(e, 'kg');
+// MASCARA PARA GARANTIR QUE O PESO MINIMO SEJA 0 E O MAXIMO 999
+document.getElementById('peso').addEventListener('input', function(e) {
+    let value = parseInt(e.target.value);
+
+    if (value < 0) {
+        e.target.value = 0;
+
+    } else if (value > 999) {
+        e.target.value = 999;
+    }
 });
+
+// EVENTO PARA BUSCAR OS VALORES DE ALTURA E PESO QUANDO CLICADO EM CALCULAR
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.btn-calcular').addEventListener('click', function(){
+        // OBTEM VALOR DO PESO
+        var peso = document.getElementById('peso').value
+        
+        // OBTEM VALOR DA ALTURA
+        var altura = document.getElementById('altura').value
+
+        // CASO NÃO TENHA INSERIDO NENHUM VALOR NOS CAMPOS
+        if (peso.length == 0 || altura.length == 0){
+            console.log('preencha todos os campos!')
+        }
+
+        // CASO TENHA INSERIDO TODOS OS VALORES
+        // IRA FAZER A REQUISIÇÃO
+        else{
+            console.log('requisição')
+        }
+    })
+})
