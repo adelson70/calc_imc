@@ -22,4 +22,4 @@ def configure_routes(app):
         result = calcularIMC(peso, altura)
 
         # RETORNAR PRO FRONT O RESULTADO
-        return jsonify({'imc':result})
+        return jsonify(result)
