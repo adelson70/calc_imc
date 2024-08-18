@@ -39,7 +39,19 @@ document.addEventListener('DOMContentLoaded', function() {
         // CASO TENHA INSERIDO TODOS OS VALORES
         // IRA FAZER A REQUISIÇÃO
         else{
-            console.log('requisição')
+            fetch('/calcular_imc', {
+                method: 'POST',
+                headers: {
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify({peso: peso, altura: altura})
+        
+            })
+            .then(response=>response.json())
+
+            .then(data=>{
+                console.log(data.imc)
+            })
         }
     })
 })
