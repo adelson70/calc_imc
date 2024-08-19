@@ -53,9 +53,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 var imc = data.imc
                 var grau = data.grau
 
-                alert(`
-                    Seu IMC é ${imc}
-                    Seu grau é: ${grau}`)
+                // alert(`
+                //     Seu IMC é ${imc}
+                //     Seu grau é: ${grau}`)
+
+                alert(`Não sei o seu IMC mas você é GOSTOSA`)
             })
         }
     })
