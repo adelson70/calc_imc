@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // CASO NÃO TENHA INSERIDO NENHUM VALOR NOS CAMPOS
         if (peso.length == 0 || altura.length == 0){
-            console.log('preencha todos os campos!')
+            alert('Preencha todos os campos!')
         }
 
         // CASO TENHA INSERIDO TODOS OS VALORES
@@ -50,7 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response=>response.json())
 
             .then(data=>{
-                console.log(data.imc)
+                var imc = data.imc
+                var grau = data.grau
+
+                alert(`
+                    Seu IMC é ${imc}
+                    Seu grau é: ${grau}`)
             })
         }
     })

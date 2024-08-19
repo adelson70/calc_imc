@@ -10,4 +10,4 @@ if __name__ == '__main__':
 
     configure_routes(app)
 
-    app.run(debug=True)
+    app.run(debug=True, host='192.168.10.26')

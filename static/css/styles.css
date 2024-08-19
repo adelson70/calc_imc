@@ -6,8 +6,31 @@ body, label, input{
     text-align: center;
 }
 
+/* ALINHANDO TODO ELEMENTO */
 .corpo{
     text-align: center;
+}
+
+/* ESTILO PARA OS INPUTS */
+.caixa-entrada{
+    border: none;
+    margin-left: 42%;
+    font-size: 15px;
+    border-bottom: 2px solid black;
+}
+
+/* CASO CLIQUE IRA FICAR SEM OUTLINE */
+.caixa-entrada:active, .caixa-entrada:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+/* ESTILO PARA O BOTÃO DE CALCULAR */
+.btn-calcular{
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-size: 20px;
 }
 
 /* REMOVE A SETA DE INCREMENTO E DECREMENTO DO INPUT TIPO NUMERO PARA CHROME E SAFARI */
