@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // CASO TENHA INSERIDO TODOS OS VALORES
         // IRA FAZER A REQUISIÇÃO
         else{
+            // REQUISIÇÃO PARA CALCULAR O IMC
             fetch('/calcular_imc', {
                 method: 'POST',
                 headers: {
@@ -47,8 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 body: JSON.stringify({peso: peso, altura: altura})
         
             })
+            // ENVIANDO DADOS NO FORMATO JSON PARA O BACK
             .then(response=>response.json())
 
+            // RECEBENDO DADOS DO BACK
             .then(data=>{
                 var imc = data.imc
                 var grau = data.grau

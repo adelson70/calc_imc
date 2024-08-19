@@ -1,3 +1,4 @@
+# FUNÇÃO PARA CALCULAR O IMC
 def calcularIMC(peso, altura):
     data = {}
 
